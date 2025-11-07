@@ -5,6 +5,18 @@
 		"factoryName": {
 			"value": "sreemannemours"
 		},
+		"dev_ls_password": {
+			"value": ""
+		},
+		"dev_ls_properties_typeProperties_server": {
+			"value": "adfnem"
+		},
+		"dev_ls_properties_typeProperties_database": {
+			"value": "db_nemours "
+		},
+		"dev_ls_properties_typeProperties_userName": {
+			"value": "adf"
+		},
 		"containerUri": {
 			"value": ""
 		},
