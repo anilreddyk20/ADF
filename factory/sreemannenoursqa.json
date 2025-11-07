@@ -1,0 +1,9 @@
+{
+	"name": "sreemannenoursqa",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "51cd7c60-0f88-43cf-940b-c09720701f54",
+		"tenantId": "61330b40-bb04-4d25-b959-f3700fbe6023"
+	}
+}
