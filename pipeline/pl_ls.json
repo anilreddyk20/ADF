@@ -1,0 +1,27 @@
+{
+	"name": "pl_ls",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "age",
+					"value": "27"
+				}
+			}
+		],
+		"variables": {
+			"age": {
+				"type": "String"
+			}
+		},
+		"annotations": []
+	}
+}
