@@ -4,6 +4,30 @@
 	"parameters": {
 		"factoryName": {
 			"value": "sreemannenoursqa"
+		},
+		"dev_ls_password": {
+			"value": ""
+		},
+		"qa_ls_password": {
+			"value": ""
+		},
+		"dev_ls_properties_typeProperties_server": {
+			"value": "adfnem"
+		},
+		"dev_ls_properties_typeProperties_database": {
+			"value": "db_nemours "
+		},
+		"dev_ls_properties_typeProperties_userName": {
+			"value": "adf"
+		},
+		"qa_ls_properties_typeProperties_server": {
+			"value": "adfnemqa"
+		},
+		"qa_ls_properties_typeProperties_database": {
+			"value": "adfqa"
+		},
+		"qa_ls_properties_typeProperties_userName": {
+			"value": "adfqa"
 		}
 	}
 }

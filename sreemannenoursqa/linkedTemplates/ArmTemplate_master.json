@@ -7,6 +7,38 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "sreemannenoursqa"
 		},
+		"dev_ls_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'dev_ls'"
+		},
+		"qa_ls_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'qa_ls'"
+		},
+		"dev_ls_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "adfnem"
+		},
+		"dev_ls_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "db_nemours "
+		},
+		"dev_ls_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "adf"
+		},
+		"qa_ls_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "adfnemqa"
+		},
+		"qa_ls_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "adfqa"
+		},
+		"qa_ls_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "adfqa"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -33,6 +65,30 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"dev_ls_password": {
+						"value": "[parameters('dev_ls_password')]"
+					},
+					"qa_ls_password": {
+						"value": "[parameters('qa_ls_password')]"
+					},
+					"dev_ls_properties_typeProperties_server": {
+						"value": "[parameters('dev_ls_properties_typeProperties_server')]"
+					},
+					"dev_ls_properties_typeProperties_database": {
+						"value": "[parameters('dev_ls_properties_typeProperties_database')]"
+					},
+					"dev_ls_properties_typeProperties_userName": {
+						"value": "[parameters('dev_ls_properties_typeProperties_userName')]"
+					},
+					"qa_ls_properties_typeProperties_server": {
+						"value": "[parameters('qa_ls_properties_typeProperties_server')]"
+					},
+					"qa_ls_properties_typeProperties_database": {
+						"value": "[parameters('qa_ls_properties_typeProperties_database')]"
+					},
+					"qa_ls_properties_typeProperties_userName": {
+						"value": "[parameters('qa_ls_properties_typeProperties_userName')]"
 					}
 				}
 			},

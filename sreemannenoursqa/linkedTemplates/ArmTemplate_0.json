@@ -6,6 +6,38 @@
 			"type": "string",
 			"metadata": "Data Factory name",
 			"defaultValue": "sreemannenoursqa"
+		},
+		"dev_ls_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'dev_ls'"
+		},
+		"qa_ls_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'qa_ls'"
+		},
+		"dev_ls_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "adfnem"
+		},
+		"dev_ls_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "db_nemours "
+		},
+		"dev_ls_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "adf"
+		},
+		"qa_ls_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "adfnemqa"
+		},
+		"qa_ls_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "adfqa"
+		},
+		"qa_ls_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "adfqa"
 		}
 	},
 	"variables": {
@@ -13,7 +45,43 @@
 	},
 	"resources": [
 		{
-			"name": "[concat(parameters('factoryName'), '/pl_ls')]",
+			"name": "[concat(parameters('factoryName'), '/pl_test1')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Set variable1",
+						"type": "SetVariable",
+						"dependsOn": [],
+						"policy": {
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"variableName": "name",
+							"value": "anilreddy"
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"variables": {
+					"anil": {
+						"type": "String"
+					},
+					"name": {
+						"type": "String"
+					}
+				},
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/pl_test2')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -29,7 +97,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"variableName": "age",
-							"value": "27"
+							"value": 27
 						}
 					}
 				],
@@ -38,10 +106,87 @@
 				},
 				"variables": {
 					"age": {
+						"type": "Integer"
+					}
+				},
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/pl_test3')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Set variable1",
+						"type": "SetVariable",
+						"dependsOn": [],
+						"policy": {
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"variableName": "surname",
+							"value": "klmn"
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"variables": {
+					"surname": {
 						"type": "String"
 					}
 				},
 				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dev_ls')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"server": "[parameters('dev_ls_properties_typeProperties_server')]",
+					"database": "[parameters('dev_ls_properties_typeProperties_database')]",
+					"encrypt": "mandatory",
+					"trustServerCertificate": false,
+					"authenticationType": "SQL",
+					"userName": "[parameters('dev_ls_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('dev_ls_password')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/qa_ls')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"server": "[parameters('qa_ls_properties_typeProperties_server')]",
+					"database": "[parameters('qa_ls_properties_typeProperties_database')]",
+					"encrypt": "mandatory",
+					"trustServerCertificate": false,
+					"authenticationType": "SQL",
+					"userName": "[parameters('qa_ls_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('qa_ls_password')]"
+					}
+				}
 			},
 			"dependsOn": []
 		}
