@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'dev_ls'"
 		},
+		"test1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'test1'"
+		},
 		"dev_ls_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "adfnem"
@@ -20,6 +24,18 @@
 			"defaultValue": "db_nemours "
 		},
 		"dev_ls_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "adf"
+		},
+		"test1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "adfnem"
+		},
+		"test1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "db_nemours "
+		},
+		"test1_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "adf"
 		},
@@ -53,6 +69,9 @@
 					"dev_ls_password": {
 						"value": "[parameters('dev_ls_password')]"
 					},
+					"test1_password": {
+						"value": "[parameters('test1_password')]"
+					},
 					"dev_ls_properties_typeProperties_server": {
 						"value": "[parameters('dev_ls_properties_typeProperties_server')]"
 					},
@@ -61,6 +80,15 @@
 					},
 					"dev_ls_properties_typeProperties_userName": {
 						"value": "[parameters('dev_ls_properties_typeProperties_userName')]"
+					},
+					"test1_properties_typeProperties_server": {
+						"value": "[parameters('test1_properties_typeProperties_server')]"
+					},
+					"test1_properties_typeProperties_database": {
+						"value": "[parameters('test1_properties_typeProperties_database')]"
+					},
+					"test1_properties_typeProperties_userName": {
+						"value": "[parameters('test1_properties_typeProperties_userName')]"
 					}
 				}
 			},
