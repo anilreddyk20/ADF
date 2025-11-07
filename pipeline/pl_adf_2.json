@@ -1,0 +1,27 @@
+{
+	"name": "pl_adf_2",
+	"properties": {
+		"activities": [
+			{
+				"name": "adfmove",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "Adf1",
+					"value": "testing"
+				}
+			}
+		],
+		"variables": {
+			"Adf1": {
+				"type": "String"
+			}
+		},
+		"annotations": []
+	}
+}
