@@ -1,0 +1,9 @@
+{
+	"name": "sreemannemours",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "eb19732d-ebe3-486d-9afd-7c3004492afb",
+		"tenantId": "61330b40-bb04-4d25-b959-f3700fbe6023"
+	}
+}

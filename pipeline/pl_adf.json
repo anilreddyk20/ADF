@@ -1,0 +1,29 @@
+{
+	"name": "pl_adf",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "adf",
+					"value": "sree"
+				}
+			}
+		],
+		"variables": {
+			"adf": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2025-11-06T11:57:56Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
