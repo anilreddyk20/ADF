@@ -1,0 +1,30 @@
+{
+	"name": "pl_test1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "name",
+					"value": "anilreddy"
+				}
+			}
+		],
+		"variables": {
+			"anil": {
+				"type": "String"
+			},
+			"name": {
+				"type": "String"
+			}
+		},
+		"annotations": []
+	}
+}
