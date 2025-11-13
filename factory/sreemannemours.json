@@ -1,5 +1,13 @@
 {
 	"name": "sreemannemours",
+	"properties": {
+		"globalParameters": {
+			"Name": {
+				"type": "string",
+				"value": "sreeman"
+			}
+		}
+	},
 	"location": "eastus",
 	"identity": {
 		"type": "SystemAssigned",
