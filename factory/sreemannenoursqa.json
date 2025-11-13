@@ -1,18 +1,4 @@
 {
-	"name": "sreemannemours",
-	"properties": {
-		"globalParameters": {
-			"Name": {
-				"type": "string",
-				"value": "sreemanpathuri"
-			},
-			"parameter": {
-				"type": "int",
-				"value": 123456789
-			}
-		}
-	},
-{
 	"name": "sreemannenoursqa",
 	"location": "eastus",
 	"identity": {
