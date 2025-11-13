@@ -11,10 +11,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'dev_ls'"
 		},
-		"test1_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'test1'"
-		},
 		"dev_ls_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "adfnem"
@@ -24,18 +20,6 @@
 			"defaultValue": "db_nemours "
 		},
 		"dev_ls_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "adf"
-		},
-		"test1_properties_typeProperties_server": {
-			"type": "string",
-			"defaultValue": "adfnem"
-		},
-		"test1_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "db_nemours "
-		},
-		"test1_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "adf"
 		}
@@ -196,28 +180,6 @@
 					"password": {
 						"type": "SecureString",
 						"value": "[parameters('dev_ls_password')]"
-					}
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/test1')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "SqlServer",
-				"typeProperties": {
-					"server": "[parameters('test1_properties_typeProperties_server')]",
-					"database": "[parameters('test1_properties_typeProperties_database')]",
-					"encrypt": "mandatory",
-					"trustServerCertificate": false,
-					"authenticationType": "SQL",
-					"userName": "[parameters('test1_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('test1_password')]"
 					}
 				}
 			},

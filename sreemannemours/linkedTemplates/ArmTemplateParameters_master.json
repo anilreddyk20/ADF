@@ -8,9 +8,6 @@
 		"dev_ls_password": {
 			"value": ""
 		},
-		"test1_password": {
-			"value": ""
-		},
 		"dev_ls_properties_typeProperties_server": {
 			"value": "adfnem"
 		},
@@ -18,15 +15,6 @@
 			"value": "db_nemours "
 		},
 		"dev_ls_properties_typeProperties_userName": {
-			"value": "adf"
-		},
-		"test1_properties_typeProperties_server": {
-			"value": "adfnem"
-		},
-		"test1_properties_typeProperties_database": {
-			"value": "db_nemours "
-		},
-		"test1_properties_typeProperties_userName": {
 			"value": "adf"
 		},
 		"containerUri": {
